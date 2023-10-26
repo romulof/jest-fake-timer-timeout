@@ -9,9 +9,10 @@ describe("Suite", () => {
 
   it("should pass", async () => {
     const result = new Promise((resolve) => {
-      setTimeout(() => resolve(true), 10);
+      setTimeout(() => resolve(true), 500)
     });
 
+    debugger
     await jest.runAllTimersAsync();
 
     expect(result).resolves.toBe(true);
